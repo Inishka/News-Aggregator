@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <section id="cont" style="background-color: rgb(206, 201, 201);">
+    <div class="container">
+      <div class="row">
+        <h2 style="margin-bottom: 20px;">Daily News</h2>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="text-centre" style="margin-bottom: 100%;"> News from Hindustan times</h3>
+            <div class="news_content">
+              {% for th in ht_news %}
+                <br>
+                <h6> -{{th}}</h6>
+                <br>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="text-centre" > News from Times of india</h3>
+            <div class="news_content">
+              {% for n in toi_news %}
+                <br>
+                <h6> - {{n}} </h6> 
+                <br>
+              {% endfor %}
+            </div>
+          </div>
+       </div>
+    </div>
+      
+  </section>
+  
+{% endblock  %} 
